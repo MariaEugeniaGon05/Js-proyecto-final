@@ -2,3 +2,11 @@
   width: 3rem;
   height: 3rem;
 }
+
+body {
+  background-color: #cdb4db;
+}
+
+.cuestionario {
+  text-align: center;
+}
