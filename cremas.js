@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Mostrar los artículos en la página perfumes
-  function displayItems() {
-    itemsContainer.innerHTML = "";
+  function displayItemsCrem() {
+    cremasContainer.innerHTML = "";
 
-    fetch("../items.json")
+    fetch("../cremas.json")
       .then((response) => response.json())
       .then((items) => {
         items.forEach(function (item) {
@@ -113,13 +113,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
           card.appendChild(cardImg);
           card.appendChild(cardBody);
-          itemsContainer.appendChild(card);
+          cremasContainer.appendChild(card);
         });
       })
       .catch((error) => {
         console.log("Error al obtener los artículos:", error);
       });
   }
-  displayItems();
+  displayItemsCrem();
   displayCart();
 });

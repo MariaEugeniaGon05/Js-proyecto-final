@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Crema H2o Humectante Aloe 350 Ml + Crema H2o Zanahoria 350 Ml",
+    "price": 806,
+    "descripcion": "Set de cremas, crema humectante corporal de aloe y crema humectante corporal de zanahoria.",
+    "image": "https://tiendacdn.farmashop.com.uy/media/catalog/product/cache/c385976bc54d78dff661f3a8d562b253/6/6/66619_10.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Crema Eucerin Ph5 75 G",
+    "price": 1325,
+    "descripcion": "Una crema suave pero efectiva para la cara y el cuerpo que activa las defensas naturales de la piel.",
+    "image": "https://tiendacdn.farmashop.com.uy/media/catalog/product/cache/c385976bc54d78dff661f3a8d562b253/5/1/51802_10.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Crema Matías González Germinal 50 Cc",
+    "price": 2070,
+    "descripcion": "Suave crema con el poder energético de las semillas germinadas. Tiene la propiedad de hidratar en profundidad, renovar, revitalizar y proteger la piel.",
+    "image": "https://tiendacdn.farmashop.com.uy/media/catalog/product/cache/c385976bc54d78dff661f3a8d562b253/4/6/46250_10_1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Crema Lancôme Anti-arrugas Rénergie 50 Ml",
+    "price": 5460,
+    "descripcion": "Con el tratamiento Rénergie Crème, su piel recobra la elasticidad, la fuerza y la resistencia de la juventud. Este tratamiento diurno en crema de doble acción, antiarrugas y reafirmante, refuerza la piel del rostro y el cuello, la reafirma y atenúa las lí.",
+    "image": "https://tiendacdn.farmashop.com.uy/media/catalog/product/cache/c385976bc54d78dff661f3a8d562b253/3/0/30902_10_1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Crema De Limpieza Matías González Anti-edad 50 Ml",
+    "price": 719,
+    "descripcion": "Suave crema que limpia la piel quitando los productos secretorios, resto de maquillaje y de la polución ambiental. Por contener antioxidantes logra un efecto protector.",
+    "image": "https://tiendacdn.farmashop.com.uy/media/catalog/product/cache/c385976bc54d78dff661f3a8d562b253/4/2/42950_01.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Crema Hidratante MotasUy 200 Ml",
+    "price": 918,
+    "descripcion": "Crema Hidrtante con aceites puros repara fortalece",
+    "image": "https://tiendacdn.farmashop.com.uy/media/catalog/product/cache/c385976bc54d78dff661f3a8d562b253/7/9/794025.jpg"
+  }
+]
