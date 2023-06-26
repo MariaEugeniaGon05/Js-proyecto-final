@@ -7,6 +7,155 @@ body {
   background-color: #cdb4db;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 .cuestionario {
   text-align: center;
+}
+
+.cart-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.cart-container ion-icon {
+  font-size: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .cart-container {
+    justify-content: flex-end;
+  }
+}
+
+.cart-modal {
+  background: rgb(243, 226, 253);
+  background: linear-gradient(
+    175deg,
+    rgba(243, 226, 253, 1) 0%,
+    rgba(210, 180, 226, 1) 46%,
+    rgba(221, 193, 238, 1) 78%
+  );
+
+  min-width: 350px;
+  max-width: 450px;
+
+  padding: 10px 30px;
+
+  position: absolute;
+  top: 50px;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.cart-modal {
+  height: 0;
+  opacity: 0;
+  transition: all 200ms;
+}
+
+.cart-modal::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+  border-radius: 35px;
+}
+
+.cart-modal::-webkit-scrollbar-thumb:hover {
+  background: #b898ca;
+}
+
+.cart-modal::-webkit-scrollbar-thumb {
+  background: #c7a8d8;
+  border-radius: 20px;
+}
+
+.cart-modal-open {
+  opacity: 1;
+  overflow-y: scroll;
+  height: 500px;
+  box-shadow: 0 0 10px 5px #03030359;
+  border: solid 2px #555555a1;
+  border-radius: 20px;
+  transition: all 300ms;
+}
+
+.cart-modal .cart-header {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: start;
+  margin: 10px;
+}
+
+.cart-header li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 16;
+  text-align: center;
+  color: #121211c4;
+}
+
+.cart-modal .cart {
+  display: grid;
+  grid-auto-flow: row;
+  place-content: start;
+  gap: 2rem;
+}
+
+.cart-modal .cart div {
+  widows: 100%;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+
+.cart-modal footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.cart-modal footer p {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cart-modal footer p span {
+  font-weight: normal;
+}
+
+@keyframes coloreado {
+  from {
+    background: rgba(210, 180, 226, 1);
+  }
+
+  to {
+    background: rgba(195, 122, 235, 1);
+  }
 }

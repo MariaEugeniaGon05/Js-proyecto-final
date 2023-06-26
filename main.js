@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   let itemsContainer = document.getElementById("items");
   let cart = document.getElementById("cart");
-  let total = document.getElementById("total");
   let storageKey = "cartItems";
   let cremasContainer = document.getElementById("cremas");
+  let cartIcon = document.querySelector(".cart-icon");
+
+  cartIcon.addEventListener("click", (e) => {
+    e.target.parentNode.querySelector("ul").classList.toggle("cart-modal-open");
+  });
 
   // Agregar artículos al carrito
   function addToCart(item) {
@@ -27,29 +31,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Mostrar el contenido del carrito y el total en pantalla
   function displayCart() {
-    cart.innerHTML = "";
+    while (cart.firstChild) {
+      cart.removeChild(cart.firstChild);
+    }
+
     let totalAmount = 0;
 
     let cartItems = JSON.parse(sessionStorage.getItem(storageKey)) || [];
 
-    cartItems.forEach(function (item) {
-      let li = document.createElement("li");
-      li.classList.add("list-group-item");
-      li.textContent = `${item.name} (Cantidad: ${item.quantity})`;
+    cartItems.forEach((item) => {
+      let contenedor = document.createElement("DIV");
+      contenedor.classList.add("list-group-item");
+      contenedor.innerHTML = `
+       <p class='item-name'>${item.name}</p>
+       <p class='item-price'>${item.price}</p>
+       <p class='item-quantity'>${item.quantity}</p>
+      `;
 
       let removeBtn = document.createElement("button");
-      removeBtn.classList.add("btn", "btn-danger", "btn-sm", "float-end");
+      removeBtn.classList.add("btn", "btn-danger", "btn-sm");
       removeBtn.textContent = "Eliminar";
       removeBtn.addEventListener("click", function () {
         removeCartItem(item.id);
       });
 
-      li.appendChild(removeBtn);
-      cart.appendChild(li);
-
-      let itemTotal = item.price * item.quantity;
-      totalAmount += itemTotal;
-      total.textContent = `Total a pagar: $${totalAmount}`;
+      contenedor.appendChild(removeBtn);
+      cart.appendChild(contenedor);
     });
 
     if (cartItems.length === 0) {
